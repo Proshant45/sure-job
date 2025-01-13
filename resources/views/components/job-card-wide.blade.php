@@ -4,7 +4,6 @@
         <x-employer-logo/>
     </div>
 
-
         <div class="flex-1 flex flex-col">
             <a href="#" class="self-start text-gray-400 text-sm">Employer</a>
             <h3 class="font-bold text-xl mt-3 text-bold hover:text-blue-800 border-transparent transition-colors duration-100"  > PHP programmer </h3>
@@ -13,7 +12,7 @@
         <div>
             <x-tag> Programmer </x-tag>
             <x-tag> Manager </x-tag>
-            <x-tag> Python</x-tag>
+            <x-tag> Desiginer</x-tag>
         </div>
 
 
