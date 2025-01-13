@@ -1,19 +1,19 @@
-<div class="p-4 bg-white/5 flex gap-x-6 rounded-xl">
+<div class="p-4 bg-white/5 flex gap-x-6 rounded-xl border border-transparent hover:border-blue-600 transition-colors duration-100">
 
     <div>
-        <img src="https://placehold.co/90" alt="employer logo" class="rounded-xl">
+        <x-employer-logo/>
     </div>
 
 
         <div class="flex-1 flex flex-col">
             <a href="#" class="self-start text-gray-400 text-sm">Employer</a>
-            <h3 class="font-bold text-xl mt-3"> PHP programmer </h3>
+            <h3 class="font-bold text-xl mt-3 text-bold hover:text-blue-800 border-transparent transition-colors duration-100"  > PHP programmer </h3>
             <p class="text-sm text-gray-400 mt-auto"> Full Time From-$60000 </p>
         </div>
         <div>
-            <x-tag> tag1 </x-tag>
-            <x-tag> tag2 </x-tag>
-            <x-tag> tag3 </x-tag>
+            <x-tag> Programmer </x-tag>
+            <x-tag> Manager </x-tag>
+            <x-tag> Python</x-tag>
         </div>
 
 
