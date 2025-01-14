@@ -7,7 +7,7 @@
     <title>Sure Job</title>
     @Vite(['resources/js/app.js','resources/css/app.css'])
 </head>
-<body class="bg-black text-white">
+<body class="bg-black text-white pb-10">
     <div class="px-10">
         <nav class="flex justify-between items-center py-6 border-b border-white/10 ">
             <div>
@@ -21,7 +21,19 @@
                 <a href="#">Salaries</a>
                 <a href="#">Companies</a>
             </div>
-            <div>Create Job</div>
+            @auth
+            <div>
+                <a href="/jobs/create">Create Job</a>
+            </div>
+            @endauth
+            @guest
+            <div class="space-x-5 font-bold">
+
+                <a href="/register">Register</a>
+                <a href="/login">Login</a>
+
+            </div>
+            @endguest
         </nav>
         <main class="mt-10 max-w-[986px] mx-auto">
             {{ $slot }}

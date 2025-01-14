@@ -4,17 +4,20 @@
            <div>
                <h1 class="text-4xl font-bold py-6"> Let's Find Your Next Job</h1>
            </div>
-           <div>
+           {{-- <div>
                <form class="mt-6">
                    <input class="border-white/10 bg-white/25 rounded-xl px-3 py-2 w-full max-w-xl" type="text" placeholder="Web Developer">
                </form>
-           </div>
+           </div> --}}
+            <x-forms.form action='/search' class="mt-6">
+                <x-forms.input :label='false' name='q' placeholder='Web developer..'/>
+            </x-forms.form>
        </section>
        <section class="pt-10">
            <x-section-heading> Top jobs </x-section-heading>
            <div class="grid lg:grid-cols-3 gap-8 mt-10">
             @foreach ($jobs as $job)
-            <x-job-card-wide :job='$job'/>
+            <x-job-card :job='$job'/>
             @endforeach
            </div>
        </section>
