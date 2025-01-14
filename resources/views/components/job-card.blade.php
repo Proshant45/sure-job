@@ -1,4 +1,5 @@
-<div class="p-4 bg-white/10 flex flex-col rounded-xl border border-transparent hover:border-blue-500 group transition-colors duration-100 ">
+@props(['job'])
+<x-panel class="flex flex-col">
     <div class="self-start text-sm">
         Employer
     </div>
@@ -8,11 +9,11 @@
     </div>
     <div class="flex justify-between items-center">
         <div >
-           <x-tag> tag1 </x-tag>
-           <x-tag> tag2 </x-tag>
-           <x-tag> tag3 </x-tag>
+            @foreach ($job->tags as $tag)
+            <x-tag :tag='$tag' size="small"> Programmer </x-tag>
+            @endforeach
         </div>
         <x-employer-logo :width='42'/>
     </div>
 
-</div>
+</x-panel>

@@ -1,5 +1,5 @@
-<div class="p-4 bg-white/5 flex gap-x-6 rounded-xl border border-transparent hover:border-blue-600 transition-colors duration-100">
-
+@props(['job'])
+<x-panel class="flex gap-x-6">
     <div>
         <x-employer-logo/>
     </div>
@@ -10,10 +10,11 @@
             <p class="text-sm text-gray-400 mt-auto"> Full Time From-$60000 </p>
         </div>
         <div>
-            <x-tag> Programmer </x-tag>
-            <x-tag> Manager </x-tag>
-            <x-tag> Desiginer</x-tag>
+            @foreach ($job->tags as $tag)
+            <x-tag :tag='$tag'> Programmer </x-tag>
+            @endforeach
+
+
         </div>
 
-
-</div>
+</x-panel>
