@@ -16,7 +16,7 @@
        <section class="pt-10">
            <x-section-heading> Top jobs </x-section-heading>
            <div class="grid lg:grid-cols-3 gap-8 mt-10">
-            @foreach ($jobs as $job)
+            @foreach ($featuredJob as $job)
             <x-job-card :job='$job'/>
             @endforeach
            </div>
@@ -33,6 +33,7 @@
        <section>
            <x-section-heading> Recent Jobs </x-section-heading>
            <div class="mt-6 space-y-10">
+
             @foreach ($jobs as $job)
                 <x-job-card-wide :job='$job'/>
             @endforeach
