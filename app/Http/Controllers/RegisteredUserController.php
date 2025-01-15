@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Storage;
 use App\Models\Employer;
 use App\Models\Job;
 use App\Models\User;
@@ -12,7 +12,7 @@ use Illuminate\Validation\Rules\Password;
 
 class RegisteredUserController extends Controller
 {
-    
+
     public function create()
     {
         return view('auth.register');

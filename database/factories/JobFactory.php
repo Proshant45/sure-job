@@ -24,7 +24,7 @@ class JobFactory extends Factory
             'location' =>fake()->randomElement(['Remote','On Site']),
             'schedule' => fake()->randomElement(['Full Time','Part Time']),
             'url'=>fake()->url,
-            'featured'=> false,
+            'featured'=> true,
 
         ];
     }
